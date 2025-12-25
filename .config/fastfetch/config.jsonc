@@ -1,0 +1,105 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto", 
+        "padding": {
+            "top": 1,
+            "left": 1,
+            "right": 4
+        }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+        "break",
+        {
+            "type": "custom",
+            "format": "\u001b[38;2;137;180;250m╭─────────────────────  Hardware  ─────────────────────╮"
+        },
+        {
+            "type": "host",
+            "key": " \u001b[38;2;166;227;161m│ \uf109  Host    "
+        },
+        {
+            "type": "cpu",
+            "key": " \u001b[38;2;166;227;161m│ \uf4bc  CPU     "
+        },
+        {
+            "type": "gpu",
+            "key": " \u001b[38;2;166;227;161m│ \uf030  GPU     "
+        },
+        {
+            "type": "memory",
+            "key": " \u001b[38;2;166;227;161m│ \uefc5  Memory  "
+        },
+        {
+            "type": "disk",
+            "key": " \u001b[38;2;166;227;161m│ \uf0a0  Disk    "
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[38;2;137;180;250m├─────────────────────  Software  ─────────────────────┤"
+        },
+        {
+            "type": "os",
+            "key": " \u001b[38;2;249;226;175m│ \ue7d9  OS      "
+        },
+        {
+            "type": "kernel",
+            "key": " \u001b[38;2;249;226;175m│ \uf013  Kernel  "
+        },
+        {
+            "type": "packages",
+            "key": " \u001b[38;2;249;226;175m│ \uf187  Packages"
+        },
+        {
+            "type": "shell",
+            "key": " \u001b[38;2;249;226;175m│ \uf489  Shell   "
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[38;2;137;180;250m├────────────────────  Environment  ───────────────────┤"
+        },
+        {
+            "type": "wm",
+            "key": " \u001b[38;2;203;166;247m│ \uf2d2  WM      "
+        },
+        {
+            "type": "wmtheme",
+            "key": " \u001b[38;2;203;166;247m│ \uf53f  Theme   "
+        },
+        {
+            "type": "terminal",
+            "key": " \u001b[38;2;203;166;247m│ \uf120  Term    "
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[38;2;137;180;250m├──────────────────  System Status  ───────────────────┤"
+        },
+        {
+            "type": "command",
+            "key": " \u001b[38;2;245;194;231m│ \uf073  OS Age  ",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); days=$((($current - $birth_install) / 86400)); echo $days days"
+        },
+        {
+            "type": "uptime",
+            "key": " \u001b[38;2;245;194;231m│ \u23fb  Uptime  "
+        },
+        {
+            "type": "datetime",
+            "key": " \u001b[38;2;245;194;231m│ \uf017  Time    ",
+            "format": "{3}-{8}-{11} {14}:{17}:{20}"
+        },
+        {
+            "type": "custom",
+            "format": "\u001b[38;2;137;180;250m╰───────────────────────────────────────────────────────╯"
+        },
+        "break",
+        {
+            "type": "colors",
+            "paddingLeft": 5,
+            "symbol": "circle"
+        }
+    ]
+}
