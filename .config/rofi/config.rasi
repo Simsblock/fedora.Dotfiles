@@ -1,0 +1,7 @@
+configuration {
+    drun-display-format: "{icon} {name}";
+    font:   "JetBrains Mono 10";
+    show-icons: true;
+}
+
+@theme "./themes/nausea.rasi"
