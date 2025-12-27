@@ -1,0 +1,24 @@
+default partial alphanumeric_keys
+xkb_symbols "us_german" {
+    include "us(basic)"
+    
+    name[Group1] = "English (US, German chars)";
+    
+    // Swap Y and Z  
+    key <AD06> { [ z, Z, z, Z ] };
+    key <AB01> { [ y, Y, y, Y ] };
+    
+    // Umlauts with Right Alt (AltGr)
+    key <AC01> { [ a, A, adiaeresis, Adiaeresis ] };
+    key <AD09> { [ o, O, odiaeresis, Odiaeresis ] };
+    key <AD07> { [ u, U, udiaeresis, Udiaeresis ] };
+    
+    // Sharp S
+    key <AC02> { [ s, S, ssharp, ssharp ] };
+    
+    // Euro sign on 5
+    key <AE05> { [ 5, percent, EuroSign, EuroSign ] };
+    
+    // Degree on backtick/tilde key
+    key <TLDE> { [ grave, asciitilde, degree, degree ] };
+};
