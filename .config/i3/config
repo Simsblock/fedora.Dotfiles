@@ -59,7 +59,7 @@ bindsym $mod+Return exec kitty
 # start a browser
 bindsym $mod+b exec firefox
 # start flameshot gui
-bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+bindsym $mod+Shift+s exec --no-startup-id ~/.config/flameshot/launch_gui.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -210,3 +210,6 @@ exec_always --no-startup-id feh --bg-scale ~/Documents/git/.Dotfiles/Wallpapers/
 exec_always --no-startup-id autotiling
 #Launch Picom
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
+#Launch Change to custom xkb keyboard
+exec_always --no-startup-id ~/.config/xkb/launch.sh
+

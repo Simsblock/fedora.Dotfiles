@@ -39,7 +39,7 @@
             "enabled": true
         },
         "MessageUpdaterAPI": {
-            "enabled": false
+            "enabled": true
         },
         "ServerListAPI": {
             "enabled": false
@@ -181,7 +181,8 @@
             "enableStreamQualityBypass": true,
             "enableEmojiBypass": true,
             "transformEmojis": true,
-            "transformStickers": true
+            "transformStickers": true,
+            "transformCompoundSentence": false
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -196,7 +197,8 @@
             "enabled": true
         },
         "FixImagesQuality": {
-            "enabled": true
+            "enabled": true,
+            "originalImagesInChat": false
         },
         "FixSpotifyEmbeds": {
             "enabled": true
@@ -238,7 +240,8 @@
             "enabled": false
         },
         "ImageFilename": {
-            "enabled": true
+            "enabled": true,
+            "showFullUrl": false
         },
         "ImageLink": {
             "enabled": false
@@ -280,7 +283,7 @@
             "enabled": false
         },
         "MessageLogger": {
-            "enabled": false
+            "enabled": true
         },
         "MessageTags": {
             "enabled": false
@@ -334,7 +337,10 @@
             "enabled": false
         },
         "OnePingPerDM": {
-            "enabled": true
+            "enabled": true,
+            "channelToAffect": "both_dms",
+            "allowMentions": false,
+            "allowEveryone": false
         },
         "oneko": {
             "enabled": false
@@ -523,7 +529,8 @@
             "enabled": false
         },
         "ViewRaw": {
-            "enabled": true
+            "enabled": true,
+            "clickMethod": "Left"
         },
         "VoiceDownload": {
             "enabled": false
@@ -584,6 +591,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1766849704995
+        "settingsSyncVersion": 1766871343193
     }
 }
