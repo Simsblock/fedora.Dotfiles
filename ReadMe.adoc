@@ -1,0 +1,41 @@
+= Sims' Fedora Dotfiles
+A Fedora configuration using i3 and nix.
+
+After getting fed up with Windows for a while, I took a deep dive into Linux with NixOS in early 2025, but despite my motivation, I lacked the time and patience to properly get to know NixOS. +
+So after even more months of being fed up with Windows, I decided to try again, but this time with a distro needing less setup and configuration. So I picked up Fedora and started configuring it!
+
+And here we are now!
+
+---
+== General Infos
+* OS: fedora
+* WM: i3
+* shell: bash
+* terminal: kitty w. starship
+* launcher: rofi
+* compositor: picom
+* statusbar: polybar
+
+== Not declared Installs
+Most of my installs are done declaratively using nix, but in some cases using dnf or other methods are nesscessary or more convenient. +
+So here's a list of (mostly) all my dnf installs:
+[source,bash]
+----
+#i3
+sudo dnf install i3 i3status dmenu i3lock xbacklight feh picom
+
+#nvidia drivers (optional of course)
+sudo dnf install akmod-nvidia
+sudo dnf install xorg-x11-drv-nvidia-cuda  # Optional, for CUDA support
+
+#nix (needs toi disable SELinux briefly)
+sudo setenforce 0
+sh <(curl -L https://nixos.org/nix/install) --daemon
+sudo setenforce 1
+
+# kitty (will change to nix soonTM)
+sudo dnf install kitty
+
+# polybar (will change to nix soonTM)
+sudo dnf install polybar
+----
