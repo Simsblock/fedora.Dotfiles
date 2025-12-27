@@ -19,3 +19,4 @@ with pkgs; [
   # Development (import from development.nix)
 ] 
 ++ import ./modules/i3.nix { inherit pkgs; }
+++ import ./modules/personal.nix { inherit pkgs; }
