@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 # Terminate already running bar instances
-polybar-msg cmd quit || killall -q polybar
+killall -q polybar
 
-# Launch bars with logging
-echo "---" | tee -a /tmp/polybar1.log
-polybar mybar 2>&1 | tee -a /tmp/polybar1.log & disown
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-echo "Bars launched..."
+# Launch polybar on each monitor
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar --reload mybar &
+done
