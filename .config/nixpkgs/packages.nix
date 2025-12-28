@@ -20,3 +20,4 @@ with pkgs; [
 ] 
 ++ import ./modules/i3.nix { inherit pkgs; }
 ++ import ./modules/personal.nix { inherit pkgs; }
+++ import ./modules/fun.nix { inherit pkgs; }
