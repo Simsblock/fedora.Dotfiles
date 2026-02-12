@@ -76,7 +76,8 @@
             "closeAllHomeButton": false,
             "closeAllFolders": false,
             "forceOpen": false,
-            "sidebarAnim": true
+            "sidebarAnim": true,
+            "closeOthers": false
         },
         "BetterGifAltText": {
             "enabled": false
@@ -182,7 +183,12 @@
             "enableEmojiBypass": true,
             "transformEmojis": true,
             "transformStickers": true,
-            "transformCompoundSentence": false
+            "transformCompoundSentence": false,
+            "emojiSize": 48,
+            "hyperLinkText": "{{NAME}}",
+            "useHyperLinks": true,
+            "disableEmbedPermissionCheck": false,
+            "stickerSize": 160
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -222,7 +228,7 @@
             "enabled": false
         },
         "GameActivityToggle": {
-            "enabled": false
+            "enabled": true
         },
         "GifPaste": {
             "enabled": true
@@ -283,7 +289,17 @@
             "enabled": false
         },
         "MessageLogger": {
-            "enabled": true
+            "enabled": true,
+            "collapseDeleted": false,
+            "deleteStyle": "text",
+            "ignoreBots": false,
+            "ignoreSelf": false,
+            "ignoreUsers": "",
+            "ignoreChannels": "",
+            "ignoreGuilds": "",
+            "logEdits": true,
+            "logDeletes": true,
+            "inlineEdits": true
         },
         "MessageTags": {
             "enabled": false
@@ -575,6 +591,9 @@
         },
         "WebContextMenus": {
             "enabled": true
+        },
+        "MoreQuickReactions": {
+            "enabled": false
         }
     },
     "uiElements": {
@@ -591,6 +610,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1766871343193
+        "settingsSyncVersion": 1767890114272
     }
 }
