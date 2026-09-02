@@ -23,7 +23,5 @@ if [ -d ~/.bashrc.d ]; then
     done
 fi
 unset rc
-
-# Initialize Starship
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init bash)"
