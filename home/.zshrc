@@ -16,9 +16,6 @@ compinit
 # End of lines added by compinstall
 
 # ------------------------------- Plugins -------------------------------
-# Syntax Highlighting
-source ~/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
 # Auto suggestions
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
@@ -28,9 +25,31 @@ ZSH_AUTOSUGGEST_HISTORY_IGNORE="(rm *|sudo *|kill *|git push --force*|git clone*
 # Completions
 source ~/.zsh/plugins/zsh-completions/zsh-completions.plugin.zsh
 
-# ------------------------------- Aliases -------------------------------
-# alias e="echo something"
+# Syntax Highlighting
+source ~/.zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
+# ------------------------------- Aliases -------------------------------
+alias feesh="
+echo '                                       ███'
+echo '                                       █████████    '
+echo '                ⊹˚.‧⁺                   ███████████'
+echo '                                         ███    ██████'
+echo '                                          ███      █████                *rawr bloop bloop*'
+echo '                                          ███        █████'
+echo '   ██████████                            ████          ██████'
+echo '    ██████████████                    █████               ████████'
+echo '      █████   ██████         ████████████                    ███████████'
+echo '        ████      ███████████████████            ██ █ ██           ███████████'
+echo '          ████      ███                           ██████                 █████'
+echo '            ███   ████████████      ██            ██████              ███████'
+echo '            ███  ████ █████████  █████ ███       ██ █ █       ████████████'
+echo '            ███ ███            █████ █████ █████████████    █████████'
+echo '            ██████             █████████       ██████████  ███'
+echo '           █████                    ██                 ██████         ⊹˚.‧⁺'
+echo '           ███                                        ██████'
+echo '                                                      ████'
+echo '                          ⊹˚.‧⁺                            '
+"
 
 # ------------------------------- Starship -------------------------------
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
