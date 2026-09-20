@@ -40,11 +40,12 @@ hl.monitor({
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
--- hl.on("hyprland.start", function () 
+hl.on("hyprland.start", function () 
+    hl.exec_cmd("qs -c simsfault")
 --   hl.exec_cmd(terminal)
 --   hl.exec_cmd("nm-applet")
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
+end)
 
 
 -------------------------------
@@ -271,3 +272,4 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+

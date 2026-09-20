@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 
-import "../Components" as Components
+import "../Modules" as Modules
 import "../Services" as Services
 
 Variants {
@@ -12,23 +12,31 @@ Variants {
     delegate: Component {
         PanelWindow {
 
-        required property var modelData
+            required property var modelData
 
-        screen: modelData
+            screen: modelData
 
-        anchors {
-            top: true
-            left: true
-            right: true
-        }
+             color: "transparent"
 
-        implicitHeight: 30
-
-            Components.Screens {}
-
-            Components.Time {
-                anchors.centerIn: parent
+            anchors {
+                top: true
+                left: true
+                right: true
             }
-        }
+
+            implicitHeight: 50
+
+                Modules.ScreenTray {
+                    anchors.leftMargin: 10
+                    anchors.topMargin: 10
+                }
+                Modules.Center {
+
+                }
+                Modules.MiscTray {
+                    anchors.rightMargin: 10
+                    anchors.topMargin: 10
+                }
+            }
     }
 }
